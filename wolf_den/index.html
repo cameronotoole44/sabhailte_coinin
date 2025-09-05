@@ -3,16 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>wolf's den</title>
-  <meta name="description" content="a tiny pink den of the wolf's secrets. guess the magic word to unlock today's surprise." />
+  <title>wolf_den.exe</title>
+  <meta name="description" content="a tiny pink den of the wolf's secrets. guess the passcode to unlock today's surprise." />
+  <!-- tab icon -->
   <link rel="icon" type="image/png" href="../assets/bunbuttIcon.png" />
   <link rel="apple-touch-icon" href="../assets/bunbuttIcon.png" />
-
   <!-- social preview -->
   <meta property="og:title" content="wolf_den.exe" />
   <meta property="og:description" content="can you crack the code today?" />
   <meta property="og:image" content="assets/bunbuttIcon.png" />
   <meta property="og:type" content="website" />
+  <!-- wolf and bunny pngs -->
+  <link rel="preload" as="image" href="../assets/wolf_icon.png">
+  <link rel="preload" as="image" href="../assets/bun_icon.png">
+  <link rel="preload" as="image" href="../assets/flame.png">
+  <link rel="preload" as="image" href="../assets/correct.png">
+  <link rel="preload" as="image" href="../assets/incorrect.png">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -23,14 +29,14 @@
         <div class="icon">
           <img src="../assets/wolf_icon.png" alt="wolf icon" id="themeIcon" />
         </div>
-        <h1>wolf_den.exe</h1>
+        <h1>wolf's den</h1>
       </div>
       <div class="date" id="date">loading...</div>
     </header>
 
     <div class="wrap">
       <p class="hint" id="hint"> 
-        hi bunny, if you guess the passcode you get to go in
+        hi bunny, if you guess the passcode you get to go inside the den!
       </p>
 
       <form id="gate" autocomplete="off" aria-label="unlock the den">
