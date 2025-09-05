@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>wolf's den</title>
+  <meta name="description" content="a tiny pink den of the wolf's secrets. guess the magic word to unlock today's surprise." />
+  <link rel="icon" type="image/png" href="../assets/bunbuttIcon.png" />
+  <link rel="apple-touch-icon" href="../assets/bunbuttIcon.png" />
+
+  <!-- social preview -->
+  <meta property="og:title" content="wolf_den.exe" />
+  <meta property="og:description" content="can you crack the code today?" />
+  <meta property="og:image" content="assets/bunbuttIcon.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-wolf">
+  <main class="card" id="app">
+    <header>
+      <div class="title-row">
+        <div class="icon">
+          <img src="../assets/wolf_icon.png" alt="wolf icon" id="themeIcon" />
+        </div>
+        <h1>wolf_den.exe</h1>
+      </div>
+      <div class="date" id="date">loading...</div>
+    </header>
+
+    <div class="wrap">
+      <p class="hint" id="hint"> 
+        hi bunny, if you guess the passcode you get to go in
+      </p>
+
+      <form id="gate" autocomplete="off" aria-label="unlock the den">
+        <label for="keyword" class="sr-only">secret passcode</label>
+        <input id="keyword" type="text" placeholder="guess here" />
+        <button type="submit" class="btn" aria-label="unlock the den">unlock</button>
+      </form>
+
+      <div class="msg" id="msg" role="status" aria-live="polite"></div>
+
+      <!-- inside the den-->
+      <section id="prize" class="prize hide" aria-live="polite" aria-label="wolf's den">
+        <header>
+          <div class="lock-row">
+            <span class="badge" aria-label="status: unlocked">unlocked</span>
+            <svg class="lock" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm-3 8V6a3 3 0 0 1 6 0v3H9Z"/>
+            </svg>
+          </div>
+          <!-- <p class="sub">the den opens… </p> -->
+        </header>
+
+        <div class="content">
+          <!-- today's note -->
+          <p id="prizeText" class="prize-text">loading your surprise...</p>
+
+          <!-- images -->
+          <img id="prizeImg" class="bunny" alt="bunny photo from the wolf's den" />
+
+          <!-- secrets/facts -->
+          <div class="secrets">
+            <h3 class="secrets-title">wolf's secrets</h3>
+            <ul id="secretList" class="secrets-list">
+              <li>loading secrets...</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer>
+      <span class="footer-left">for bunny, from wolf 🐰🖤🩷🐺</span>
+      <span id="streak" class="tiny" aria-live="polite"></span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+
+  <!-- visual-hidden utility for a11y -->
+  <style>
+    .sr-only {
+      position:absolute !important; width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+    }
+  </style>
+</body>
+</html>
